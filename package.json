@@ -1,0 +1,10 @@
+{
+  "name": "port-root",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "npm start --prefix PORT",
+    "build": "npm run build --prefix PORT",
+    "test": "npm run test --prefix PORT",
+    "ng": "npm run ng --prefix PORT"
+  }
+}

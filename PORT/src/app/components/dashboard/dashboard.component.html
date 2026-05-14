@@ -1,0 +1,80 @@
+<div class="landing-page fade-in">
+  <!-- Animated mesh blobs -->
+  <div class="mesh-container">
+    <div class="mesh-blob orange-blob"></div>
+    <div class="mesh-blob purple-blob"></div>
+    <div class="mesh-blob blue-blob"></div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        Hi, I'm <span class="glow-text">Wency Jezrel</span>
+      </h1>
+      <p class="hero-subtitle">
+        Full-Stack Web &amp; Mobile Developer building scalable systems and interactive experiences.
+      </p>
+      <div class="scroll-indicator">
+        <span class="mouse"></span>
+        <span>Scroll down</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Story Projects -->
+  <section class="projects-section">
+    <div class="section-heading">
+      <h2 class="section-title">Selected Works</h2>
+    </div>
+
+    <div class="project-showcase">
+      <div *ngFor="let project of projects; let i = index" 
+           class="glass-panel project-panel"
+           [ngClass]="i % 2 === 0 ? 'slide-left' : 'slide-right'">
+        <div class="project-glow" [style.background]="project.glow"></div>
+        <div class="project-info">
+          <div class="project-header">
+            <span class="project-icon" [innerHTML]="project.icon"></span>
+            <span class="badge" [ngClass]="project.status === 'Production' ? 'badge-success' : 'badge-thesis'">{{project.status}}</span>
+          </div>
+          <h3 class="project-name">{{project.name}}</h3>
+          <h4 class="project-fullname">{{project.fullName}}</h4>
+          <p class="project-desc">{{project.description}}</p>
+          
+          <div class="tech-badges">
+            <span *ngFor="let t of project.tech" class="tech-badge">{{t}}</span>
+          </div>
+
+          <div class="progress-container">
+            <div class="progress-label">
+              <span>Completion</span>
+              <span>{{project.progress}}%</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill" [style.width.%]="project.progress" [style.background]="project.color"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section class="certs-section">
+    <div class="section-heading">
+      <h2 class="section-title">Certifications</h2>
+    </div>
+    
+    <div class="certs-grid">
+      <div *ngFor="let cert of certificates" class="glass-panel cert-card">
+        <div class="cert-glow" [style.background]="'radial-gradient(circle at center, ' + cert.color + ' 0%, transparent 70%)'"></div>
+        <div class="cert-icon" [innerHTML]="cert.icon"></div>
+        <div class="cert-details">
+          <h3 class="cert-name">{{cert.name}}</h3>
+          <p class="cert-issuer">{{cert.issuer}} · {{cert.date}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
