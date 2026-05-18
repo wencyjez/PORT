@@ -1,0 +1,23 @@
+<div class="stack-wrapper fade-in">
+  <div class="page-header">
+    <h2 class="page-heading accent-text">Technology Stack</h2>
+    <p class="page-sub">Tools, frameworks &amp; technologies I work with</p>
+  </div>
+
+  <div class="stack-grid">
+    <div *ngFor="let cat of categories(); let i = index"
+         class="glass-card cat-card"
+         [style.animation-delay]="(i * 0.08) + 's'">
+      <div class="cat-header">
+        <span class="cat-icon" [style.background]="cat.color + '18'" [style.color]="cat.color"></span>
+        <span class="cat-label">{{cat.label}}</span>
+      </div>
+      <div class="tech-cloud">
+        <div *ngFor="let tech of cat.techs" class="skill-pill interactive-pill">
+          <span class="skill-pill-icon" [style.color]="cat.color"><i [class]="tech.icon"></i></span>
+          <span class="tech-name">{{tech.name}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

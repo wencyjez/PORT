@@ -1,0 +1,45 @@
+<div class="landing-page fade-in">
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-container">
+      <div class="hero-text-content">
+        <h1 class="hero-title">
+          Hi, I'm <span class="glow-text">Wency Jezrel</span>
+        </h1>
+        <p class="hero-subtitle">
+          Aspiring software developer with a foundation in web and mobile development. Experienced in building academic
+          and internship-based projects using Java, JavaScript, PHP, and Angular. Eager to apply technical skills and
+          AI-assisted tools to contribute to real-world development teams.
+        </p>
+      </div>
+      <div class="hero-image-content">
+        <div class="hero-image-glow"></div>
+        <div class="hero-image-wrapper">
+          <img [src]="themeService.isDarkTheme ? 'assets/displaypicture_dark.png' : 'assets/displaypicture_light.png'"
+            alt="Wency Jezrel" class="hero-image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section class="certs-section">
+    <div class="page-header">
+      <h2 class="page-heading accent-text">Certifications</h2>
+      <p class="page-sub">Professional credentials and achievements</p>
+    </div>
+
+    <div class="certs-grid">
+      <div *ngFor="let cert of certificates" class="glass-card cert-card">
+        <div class="cert-glow"
+          [style.background]="'radial-gradient(circle at center, ' + cert.color + ' 0%, transparent 70%)'"></div>
+        <div class="cert-icon" [innerHTML]="cert.icon"></div>
+        <div class="cert-details">
+          <h3 class="cert-name">{{cert.name}}</h3>
+          <p class="cert-issuer">{{cert.issuer}}<ng-container *ngIf="cert.date"> · {{cert.date}}</ng-container></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

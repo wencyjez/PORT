@@ -1,0 +1,149 @@
+.projects-wrapper {
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: clamp(1rem, 4vw, 3rem);
+  padding-right: clamp(1rem, 4vw, 3rem);
+}
+
+.project-showcase {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.project-panel {
+  flex: 0 1 500px;
+  width: 100%;
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-glow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  opacity: 0.1;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.project-panel:hover .project-glow {
+  opacity: 0.3;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.project-icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(var(--text-color), 0.05);
+  border-radius: 14px;
+  color: var(--accent-color);
+}
+
+.project-name {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.project-fullname {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.project-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-color);
+  opacity: 0.8;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.progress-container {
+  margin-top: auto;
+  padding-top: 1.5rem;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.progress-track {
+  height: 4px;
+  background: rgba(var(--text-color), 0.08);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 10px;
+}
+
+@media (max-width: 900px) {
+  .project-showcase {
+    flex-direction: column;
+    align-items: center;
+  }
+  .project-panel {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-panel  { padding: 1.5rem; }
+  .project-name   { font-size: 1.5rem; }
+  .tech-badges    { flex-wrap: wrap; }
+  .project-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-panel {
+    padding: 1.25rem;
+  }
+  .project-name {
+    font-size: 1.25rem;
+  }
+}

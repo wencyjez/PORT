@@ -1,0 +1,227 @@
+.edu-wrapper { animation: fadeSlideUp 0.7s cubic-bezier(0.4,0,0.2,1) both; padding-top: 6rem; }
+
+/* Education grid */
+.edu-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.edu-card {
+  flex: 0 1 500px;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 1.25rem;
+  animation: fadeSlideUp 0.5s ease both;
+}
+
+
+.edu-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+.school-logo {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+.edu-badge {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.edu-degree {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  line-height: 1.3;
+}
+.edu-school {
+  font-size: 0.8rem;
+  color: var(--accent-color);
+  font-weight: 500;
+  margin-top: 2px;
+}
+.edu-period {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+.edu-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-top: 0.5rem;
+}
+
+.edu-achievements {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.ach-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--text-muted);
+}
+.ach-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+}
+.ach-list li {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  padding-left: 1rem;
+  position: relative;
+}
+.ach-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-size: 0.72rem;
+}
+
+.edu-gpa {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  margin-top: auto;
+  padding: 0.75rem 1.5rem;
+  background: var(--glass-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  width: auto;
+}
+.gpa-val {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+.gpa-label {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* Certifications */
+.certs-section { margin-top: 1rem; }
+.section-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.3px;
+}
+.certs-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+}
+.cert-card {
+  flex: 0 1 500px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 1.25rem;
+}
+.cert-watermark {
+  position: absolute;
+  right: -20px;
+  bottom: -20px;
+  font-size: 10rem;
+  opacity: 0.04;
+  z-index: 0;
+  pointer-events: none;
+}
+.cert-header {
+  position: relative;
+  z-index: 1;
+}
+.cert-icon-top {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  background: var(--glass-bg);
+  border: 1px solid var(--border-color);
+  color: var(--accent-color);
+}
+.cert-info {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+}
+.cert-name {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  line-height: 1.3;
+  margin: 0;
+}
+.cert-issuer {
+  font-size: 0.95rem;
+  color: var(--text-color);
+  opacity: 0.9;
+  font-weight: 600;
+}
+.cert-period {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .edu-grid, .certs-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .edu-card, .cert-card {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .edu-card { padding: 1.25rem; }
+  .cert-card { padding: 1.25rem; }
+}

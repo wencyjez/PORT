@@ -1,0 +1,128 @@
+.skeleton-wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.skeleton-pulse {
+  background: linear-gradient(90deg, var(--glass-border) 25%, var(--glass-bg-hover) 50%, var(--glass-border) 75%);
+  background-size: 200% 100%;
+  animation: pulse 1.5s infinite linear;
+  border-radius: 8px;
+}
+
+@keyframes pulse {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Header Skeleton */
+.skeleton-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem clamp(1rem, 5vw, 4rem);
+  height: 80px;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.skeleton-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.skeleton-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.skeleton-link {
+  width: 70px;
+  height: 18px;
+  border-radius: 6px;
+}
+
+/* Main Skeleton */
+.skeleton-main {
+  flex: 1;
+  padding: 2rem clamp(1rem, 4vw, 3rem);
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Hero Skeleton */
+.skeleton-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 40vh;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.skeleton-title {
+  width: 70%;
+  max-width: 500px;
+  height: 50px;
+  border-radius: 12px;
+}
+
+.skeleton-subtitle {
+  width: 90%;
+  max-width: 700px;
+  height: 20px;
+}
+
+.skeleton-indicator {
+  width: 32px;
+  height: 52px;
+  border-radius: 16px;
+  margin-top: 2rem;
+}
+
+/* Projects Skeleton */
+.skeleton-projects {
+  margin-top: 4rem;
+}
+
+.skeleton-section-title {
+  width: 200px;
+  height: 30px;
+  margin-bottom: 2.5rem;
+  border-radius: 8px;
+}
+
+.skeleton-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.skeleton-card {
+  width: 100%;
+  height: 280px;
+  border-radius: 20px;
+}
+
+@media (min-width: 768px) {
+  .skeleton-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hide-mobile {
+    display: none;
+  }
+}
