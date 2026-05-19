@@ -5,19 +5,154 @@
   </div>
 
   <div class="stack-grid">
-    <div *ngFor="let cat of categories(); let i = index"
-         class="glass-card cat-card"
-         [style.animation-delay]="(i * 0.08) + 's'">
+
+    <!-- Category 1: Frontend -->
+    <div class="glass-card cat-card" style="animation-delay: 0s;">
       <div class="cat-header">
-        <span class="cat-icon" [style.background]="cat.color + '18'" [style.color]="cat.color"></span>
-        <span class="cat-label">{{cat.label}}</span>
+        <span class="cat-icon" style="background: #5b5ef418; color: #5b5ef4;"><i
+            class="bi bi-layout-text-window-reverse"></i></span>
+        <span class="cat-label">Frontend</span>
       </div>
       <div class="tech-cloud">
-        <div *ngFor="let tech of cat.techs" class="skill-pill interactive-pill">
-          <span class="skill-pill-icon" [style.color]="cat.color"><i [class]="tech.icon"></i></span>
-          <span class="tech-name">{{tech.name}}</span>
+        <div class="skill-pill interactive-pill">
+          <span class="skill-pill-icon" style="color: #5b5ef4;">
+            <img src="assets/angular.png" alt="Angular" style="width: 18px; height: 18px; object-fit: contain;">
+          </span>
+          <span class="tech-name">Angular</span>
+        </div>
+        <div class="skill-pill interactive-pill">
+          <span class="skill-pill-icon" style="color: #5b5ef4;">
+            <img src="assets/typescipt.png" alt="TypeScript" style="width: 18px; height: 18px; object-fit: contain;">
+          </span>
+          <span class="tech-name">TypeScript</span>
+        </div>
+        <div class="skill-pill interactive-pill">
+          <span class="skill-pill-icon" style="color: #5b5ef4;">
+            <img src="assets/html.png" alt="HTML" style="width: 18px; height: 18px; object-fit: contain;">
+          </span>
+          <span class="tech-name">HTML</span>
+        </div>
+        <div class="skill-pill interactive-pill">
+          <span class="skill-pill-icon" style="color: #5b5ef4;">
+            <img src="assets/css.png" alt="CSS" style="width: 18px; height: 18px; object-fit: contain;">
+          </span>
+          <span class="tech-name">CSS</span>
+        </div>
+        <div class="skill-pill interactive-pill">
+          <span class="skill-pill-icon" style="color: #5b5ef4;">
+            <img src="assets/javascript.png" alt="JavaScript" style="width: 18px; height: 18px; object-fit: contain;">
+          </span>
+          <span class="tech-name">JavaScript</span>
         </div>
       </div>
     </div>
+
+    <!-- Category 2: Backend -->
+    <div class="glass-card cat-card" style="animation-delay: 0.08s;">
+      <div class="cat-header">
+        <span class="cat-icon" style="background: #7c3aed18; color: #7c3aed;"><i class="bi bi-server"></i></span>
+        <span class="cat-label">Backend</span>
+      </div>
+      <div class="tech-cloud">
+        <div class="skill-pill interactive-pill">
+          <span class="skill-pill-icon" style="color: #7c3aed;">
+            <img src="assets/java.png" alt="Java" style="width: 18px; height: 18px; object-fit: contain;">
+          </span>
+          <span class="tech-name">Java</span>
+        </div>
+        <div class="skill-pill interactive-pill">
+          <span class="skill-pill-icon" style="color: #7c3aed;">
+            <img src="assets/spring.png" alt="Spring Boot" style="width: 18px; height: 18px; object-fit: contain;">
+          </span>
+          <span class="tech-name">Spring Boot</span>
+        </div>
+        <div class="skill-pill interactive-pill">
+          <span class="skill-pill-icon" style="color: #7c3aed;">
+            <img src="assets/php.png" alt="PHP" style="width: 18px; height: 18px; object-fit: contain;">
+          </span>
+          <span class="tech-name">PHP</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category 3: Database -->
+    <div class="glass-card cat-card" style="animation-delay: 0.16s;">
+      <div class="cat-header">
+        <span class="cat-icon" style="background: #0ea5e918; color: #0ea5e9;"><i class="bi bi-database"></i></span>
+        <span class="cat-label">Database</span>
+      </div>
+      <div class="tech-cloud">
+        <div class="skill-pill interactive-pill">
+          <span class="skill-pill-icon" style="color: #0ea5e9;">
+            <img src="assets/sql.png" alt="MySQL" style="width: 18px; height: 18px; object-fit: contain;">
+          </span>
+          <span class="tech-name">MySQL</span>
+        </div>
+        <div class="skill-pill interactive-pill">
+          <span class="skill-pill-icon" style="color: #0ea5e9;">
+            <img src="assets/firebase.png" alt="Firebase" style="width: 18px; height: 18px; object-fit: contain;">
+          </span>
+          <span class="tech-name">Firebase</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category 4: Mobile & Hardware -->
+    <div class="glass-card cat-card" style="animation-delay: 0.24s;">
+      <div class="cat-header">
+        <span class="cat-icon" style="background: #f59e0b18; color: #f59e0b;"><i class="bi bi-phone"></i></span>
+        <span class="cat-label">Mobile &amp; Hardware</span>
+      </div>
+      <div class="tech-cloud">
+        <div class="skill-pill interactive-pill">
+          <span class="skill-pill-icon" style="color: #f59e0b;">
+            <img src="assets/androidstudio.png" alt="Android Studio"
+              style="width: 18px; height: 18px; object-fit: contain;">
+          </span>
+          <span class="tech-name">Android Studio</span>
+        </div>
+        <div class="skill-pill interactive-pill">
+          <span class="skill-pill-icon" style="color: #f59e0b;">
+            <img src="assets/java.png" alt="Java" style="width: 18px; height: 18px; object-fit: contain;">
+          </span>
+          <span class="tech-name">Java (Android)</span>
+        </div>
+        <div class="skill-pill interactive-pill">
+          <span class="skill-pill-icon" style="color: #f59e0b;">
+            <img src="assets/arduino.png" alt="Arduino" style="width: 18px; height: 18px; object-fit: contain;">
+          </span>
+          <span class="tech-name">Arduino (C++)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category 5: Reporting & Tools -->
+    <div class="glass-card cat-card" style="animation-delay: 0.32s;">
+      <div class="cat-header">
+        <span class="cat-icon" style="background: #10b98118; color: #10b981;"><i class="bi bi-tools"></i></span>
+        <span class="cat-label">Reporting &amp; Tools</span>
+      </div>
+      <div class="tech-cloud">
+        <div class="skill-pill interactive-pill">
+          <span class="skill-pill-icon" style="color: #10b981;">
+            <img src="assets/jasper.png" alt="Jasper" style="width: 18px; height: 18px; object-fit: contain;">
+          </span>
+          <span class="tech-name">JasperReports</span>
+        </div>
+        <div class="skill-pill interactive-pill">
+          <span class="skill-pill-icon" style="color: #10b981;">
+            <img src="assets/git.png" alt="Git" style="width: 18px; height: 18px; object-fit: contain;">
+          </span>
+          <span class="tech-name">GitHub</span>
+        </div>
+        <div class="skill-pill interactive-pill">
+          <span class="skill-pill-icon" style="color: #10b981;">
+            <img src="assets/vscode.png" alt="VS Code" style="width: 18px; height: 18px; object-fit: contain;">
+          </span>
+          <span class="tech-name">VS Code</span>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>

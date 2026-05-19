@@ -1,16 +1,10 @@
-import { Component, inject, signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { PortfolioService } from '../../services/portfolio.service';
-import { TechCategory } from '../../models/portfolio.model';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-stack',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './stack.component.html',
   styleUrls: ['./stack.component.css']
 })
-export class StackComponent {
-  private portfolioService = inject(PortfolioService);
-  categories = signal<TechCategory[]>(this.portfolioService.getTechCategories());
-}
+export class StackComponent {}

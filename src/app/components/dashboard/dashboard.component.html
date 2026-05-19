@@ -23,21 +23,81 @@
     </div>
   </section>
 
-  <!-- Certifications Section -->
-  <section class="certs-section">
+  <!-- Highlights & Quick Info Section -->
+  <section class="info-section">
     <div class="page-header">
-      <h2 class="page-heading accent-text">Certifications</h2>
-      <p class="page-sub">Professional credentials and achievements</p>
+      <h2 class="page-heading accent-text">Technical Overview</h2>
+      <p class="page-sub">Key metrics, core focus areas, and quick details</p>
     </div>
 
-    <div class="certs-grid">
-      <div *ngFor="let cert of certificates" class="glass-card cert-card">
-        <div class="cert-glow"
-          [style.background]="'radial-gradient(circle at center, ' + cert.color + ' 0%, transparent 70%)'"></div>
-        <div class="cert-icon" [innerHTML]="cert.icon"></div>
-        <div class="cert-details">
-          <h3 class="cert-name">{{cert.name}}</h3>
-          <p class="cert-issuer">{{cert.issuer}}<ng-container *ngIf="cert.date"> · {{cert.date}}</ng-container></p>
+    <div class="info-grid">
+      <!-- Card 1: Internship Stats -->
+      <div class="glass-card info-card stats-card">
+        <div class="card-glow-blue"></div>
+        <h3 class="card-title"><i class="bi bi-briefcase"></i> Professional Metrics</h3>
+        <div class="stats-wrapper">
+          <div class="stat-item">
+            <span class="stat-value">800</span>
+            <span class="stat-label">Internship Hours Rendered</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-value">2</span>
+            <span class="stat-label">Systems</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Core Focus Areas -->
+      <div class="glass-card info-card focus-card">
+        <div class="card-glow-purple"></div>
+        <h3 class="card-title"><i class="bi bi-cpu"></i> Core Specializations</h3>
+        <ul class="focus-list">
+          <li>
+            <i class="bi bi-laptop"></i>
+            <div>
+              <strong>Front-End Engineering</strong>
+              <p>Crafting high-fidelity, responsive, and interactive UIs in Angular & TypeScript.</p>
+            </div>
+          </li>
+          <li>
+            <i class="bi bi-server"></i>
+            <div>
+              <strong>Back-End Development</strong>
+              <p>Designing RESTful APIs and databases with Spring Boot, Java, and MySQL.</p>
+            </div>
+          </li>
+          <li>
+            <i class="bi bi-phone"></i>
+            <div>
+              <strong>Mobile Applications</strong>
+              <p>Developing native and hybrid Android applications using Android Studio.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Card 3: Quick Personal Details -->
+      <div class="glass-card info-card details-card">
+        <div class="card-glow-orange"></div>
+        <h3 class="card-title"><i class="bi bi-person-badge"></i> Quick Information</h3>
+        <div class="details-list">
+          <div class="details-item">
+            <span class="details-label">Current Role:</span>
+            <span class="details-value">Aspiring Software Developer</span>
+          </div>
+          <div class="details-item">
+            <span class="details-label">Education:</span>
+            <span class="details-value">BS in IT (Mobile & Internet Technology)</span>
+          </div>
+          <div class="details-item">
+            <span class="details-label">Affiliations:</span>
+            <span class="details-value">National University & Asia Pacific College</span>
+          </div>
+          <div class="details-item">
+            <span class="details-label">Location:</span>
+            <span class="details-value">Metro Manila, Philippines</span>
+          </div>
         </div>
       </div>
     </div>

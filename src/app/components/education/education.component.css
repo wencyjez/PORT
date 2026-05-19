@@ -1,4 +1,14 @@
-.edu-wrapper { animation: fadeSlideUp 0.7s cubic-bezier(0.4,0,0.2,1) both; padding-top: 6rem; }
+.edu-wrapper {
+  animation: fadeSlideUp 0.7s cubic-bezier(0.4,0,0.2,1) both;
+  padding-top: 9rem;
+  padding-bottom: 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: clamp(1rem, 4vw, 3rem);
+  padding-right: clamp(1rem, 4vw, 3rem);
+}
 
 /* Education grid */
 .edu-grid {
@@ -29,13 +39,19 @@
   gap: 1rem;
 }
 .school-logo {
-  width: 46px;
-  height: 46px;
-  border-radius: 14px;
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.4rem;
+}
+
+.school-logo img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
 }
 .edu-badge {
   font-family: 'Inter', sans-serif;
@@ -130,98 +146,19 @@
   font-weight: 600;
 }
 
-/* Certifications */
-.certs-section { margin-top: 1rem; }
-.section-title {
-  font-family: 'Outfit', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 1.25rem;
-  letter-spacing: -0.3px;
-}
-.certs-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2.5rem;
-}
-.cert-card {
-  flex: 0 1 500px;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  gap: 1.25rem;
-}
-.cert-watermark {
-  position: absolute;
-  right: -20px;
-  bottom: -20px;
-  font-size: 10rem;
-  opacity: 0.04;
-  z-index: 0;
-  pointer-events: none;
-}
-.cert-header {
-  position: relative;
-  z-index: 1;
-}
-.cert-icon-top {
-  width: 46px;
-  height: 46px;
-  border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.4rem;
-  background: var(--glass-bg);
-  border: 1px solid var(--border-color);
-  color: var(--accent-color);
-}
-.cert-info {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.35rem;
-}
-.cert-name {
-  font-family: 'Outfit', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 700;
-  letter-spacing: -0.3px;
-  line-height: 1.3;
-  margin: 0;
-}
-.cert-issuer {
-  font-size: 0.95rem;
-  color: var(--text-color);
-  opacity: 0.9;
-  font-weight: 600;
-}
-.cert-period {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  font-weight: 500;
-}
-
 @media (max-width: 900px) {
-  .edu-grid, .certs-grid {
+  .edu-grid {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
   }
-  .edu-card, .cert-card {
+  .edu-card {
     min-width: 0;
     width: 100%;
+    flex: none;
+    height: max-content;
   }
 }
 
 @media (max-width: 768px) {
   .edu-card { padding: 1.25rem; }
-  .cert-card { padding: 1.25rem; }
 }

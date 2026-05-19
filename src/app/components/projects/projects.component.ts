@@ -12,6 +12,23 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class ProjectsComponent {
   projects: any[];
 
+  isVeritapModalOpen = false;
+  veritapImages: string[] = [
+    'attendance.png',
+    'dashboard.png',
+    'display.png',
+    'hardware.png',
+    'login-teachers.png',
+    'login.png',
+    'mainpage.png',
+    'masterlist.png',
+    'section.png',
+    'subjects.png',
+    'teachers.png',
+    'view attendance.png'
+  ];
+  currentImageIndex = 0;
+
   constructor(private sanitizer: DomSanitizer) {
     this.projects = [
       {
@@ -70,5 +87,34 @@ export class ProjectsComponent {
         glow: 'rgba(16, 185, 129, 0.4)'
       }
     ];
+  }
+
+  openVeritapModal() {
+    this.isVeritapModalOpen = true;
+    this.currentImageIndex = 0;
+    document.body.style.overflow = 'hidden';
+  }
+
+  closeModal() {
+    this.isVeritapModalOpen = false;
+    document.body.style.overflow = 'auto';
+  }
+
+  nextImage(event: Event) {
+    event.stopPropagation();
+    if (this.currentImageIndex < this.veritapImages.length - 1) {
+      this.currentImageIndex++;
+    } else {
+      this.currentImageIndex = 0;
+    }
+  }
+
+  prevImage(event: Event) {
+    event.stopPropagation();
+    if (this.currentImageIndex > 0) {
+      this.currentImageIndex--;
+    } else {
+      this.currentImageIndex = this.veritapImages.length - 1;
+    }
   }
 }

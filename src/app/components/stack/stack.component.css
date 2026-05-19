@@ -1,4 +1,14 @@
-.stack-wrapper { animation: fadeSlideUp 0.7s cubic-bezier(0.4,0,0.2,1) both; padding-top: 6rem; }
+.stack-wrapper {
+  animation: fadeSlideUp 0.7s cubic-bezier(0.4,0,0.2,1) both;
+  padding-top: 9rem;
+  padding-bottom: 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: clamp(1rem, 4vw, 3rem);
+  padding-right: clamp(1rem, 4vw, 3rem);
+}
 
 .stack-grid {
   display: flex;
@@ -60,11 +70,13 @@
 @media (max-width: 900px) {
   .stack-grid {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
   }
   .cat-card {
     min-width: 0;
     width: 100%;
+    flex: none;
+    height: max-content;
   }
 }
 @media (max-width: 600px) {

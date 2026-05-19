@@ -9,12 +9,14 @@
     <!-- Bachelor's Degree -->
     <div class="glass-card edu-card featured" style="animation-delay: 0s;">
       <div class="edu-top">
-        <div class="school-logo" style="background: #5b5ef415; display: flex; gap: 8px; padding: 4px;">
-          <img src="assets/nulogo.png" alt="NU Logo" style="width: 32px; height: 32px; object-fit: contain;">
-          <img src="assets/apclogo.png" alt="APC Logo" style="width: 32px; height: 32px; object-fit: contain;">
+        <div class="school-logo" style="background: #5b5ef415;">
+          <img src="assets/nulogo.png" alt="NU Logo">
         </div>
-        <div class="edu-badge-wrap">
-          <span class="edu-badge" style="background: #5b5ef418; color: #5b5ef4;">BS Degree</span>
+        <div class="school-logo" style="background: #5b5ef415;">
+          <img src="assets/apclogo.png" alt="APC Logo">
+        </div>
+        <div class="edu-badge-wrap" style="margin-left: auto;">
+          <span class="edu-badge" style="background: #5b5ef418; color: #5b5ef4;">College</span>
         </div>
       </div>
       <div class="edu-body">
@@ -36,10 +38,10 @@
     <div class="glass-card edu-card" style="animation-delay: 0.1s;">
       <div class="edu-top">
         <div class="school-logo" style="background: #0ea5e915;">
-          <i class="shs-icon"></i>
+          <img src="assets/ces.png" alt="CES Logo">
         </div>
-        <div class="edu-badge-wrap">
-          <span class="edu-badge" style="background: #0ea5e918; color: #0ea5e9;">SHS</span>
+        <div class="edu-badge-wrap" style="margin-left: auto;">
+          <span class="edu-badge" style="background: #0ea5e918; color: #0ea5e9;">Senior High School</span>
         </div>
       </div>
       <div class="edu-body">
@@ -47,24 +49,6 @@
         <p class="edu-school">Christian Ecclesiastical School</p>
         <p class="edu-period">2020 – 2022</p>
         <p class="edu-desc">Completed the Humanities and Social Sciences (HUMSS) strand.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Certifications / Awards section -->
-  <div class="certs-section">
-    <h3 class="section-title">Certifications &amp; Awards</h3>
-    <div class="certs-grid">
-      <div *ngFor="let cert of certifications()" class="glass-card cert-card">
-        <i class="cert-watermark" [class]="cert.icon"></i>
-        <div class="cert-header">
-          <span class="cert-icon-top"><i [class]="cert.icon"></i></span>
-        </div>
-        <div class="cert-info">
-          <h3 class="cert-name">{{cert.name}}</h3>
-          <span class="cert-issuer">{{cert.issuer}}</span>
-          <span class="cert-period">{{cert.year}}</span>
-        </div>
       </div>
     </div>
   </div>

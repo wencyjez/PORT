@@ -1,4 +1,14 @@
-.exp-wrapper { animation: fadeSlideUp 0.7s cubic-bezier(0.4,0,0.2,1) both; padding-top: 6rem; }
+.exp-wrapper {
+  animation: fadeSlideUp 0.7s cubic-bezier(0.4,0,0.2,1) both;
+  padding-top: 9rem;
+  padding-bottom: 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: clamp(1rem, 4vw, 3rem);
+  padding-right: clamp(1rem, 4vw, 3rem);
+}
 
 .exp-grid {
   display: flex;
@@ -39,6 +49,30 @@
   letter-spacing: 1px;
   border: 1px solid rgba(255, 255, 255, 0.8);
   white-space: nowrap;
+}
+
+.exp-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.company-logo {
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.company-logo img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
 }
 
 .exp-header {
@@ -117,11 +151,13 @@
 @media (max-width: 900px) {
   .exp-grid {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
   }
   .exp-card {
     min-width: 0;
     width: 100%;
+    flex: none;
+    height: max-content;
   }
 }
 

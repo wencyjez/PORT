@@ -34,6 +34,9 @@ import { ThemeService } from '../../services/theme.service';
           <a class="nav-item" routerLink="/education" routerLinkActive="active" (click)="closeMobileMenu()">
             Education
           </a>
+          <a class="nav-item" routerLink="/certificates" routerLinkActive="active" (click)="closeMobileMenu()">
+            Certificates
+          </a>
         </nav>
 
         <!-- Right Section: Socials & Toggle -->
