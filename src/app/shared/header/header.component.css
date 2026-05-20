@@ -88,9 +88,23 @@
   color: white;
   font-weight: 600;
   background: var(--accent-gradient);
+  animation: activeNavGlow 3s ease-in-out infinite alternate;
   box-shadow:
-    0 2px 12px -2px rgba(var(--accent-color-rgb), 0.4),
-    0 0 0 1px rgba(var(--accent-color-rgb), 0.1) inset;
+    0 2px 14px -2px rgba(var(--accent-color-rgb), 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+}
+
+@keyframes activeNavGlow {
+  from {
+    box-shadow:
+      0 2px 10px -2px rgba(var(--accent-color-rgb), 0.35),
+      0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+  }
+  to {
+    box-shadow:
+      0 4px 18px 2px rgba(var(--accent-color-rgb), 0.5),
+      0 0 0 1px rgba(255, 255, 255, 0.15) inset;
+  }
 }
 
 /* ── Right Section ── */

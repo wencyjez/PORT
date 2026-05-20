@@ -13,6 +13,8 @@ export class ProjectsComponent {
   projects: any[];
 
   isVeritapModalOpen = false;
+  isBudgetifyModalOpen = false;
+  isDentalClinicLoading = false;
   veritapImages: string[] = [
     'attendance.png',
     'dashboard.png',
@@ -100,6 +102,26 @@ export class ProjectsComponent {
     document.body.style.overflow = 'auto';
   }
 
+  openBudgetifyModal() {
+    this.isBudgetifyModalOpen = true;
+    document.body.style.overflow = 'hidden';
+  }
+
+  closeBudgetifyModal() {
+    this.isBudgetifyModalOpen = false;
+    document.body.style.overflow = 'auto';
+  }
+
+  downloadApk() {
+    const link = document.createElement('a');
+    link.href = 'budgetify.apk';
+    link.download = 'budgetify.apk';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    this.closeBudgetifyModal();
+  }
+
   nextImage(event: Event) {
     event.stopPropagation();
     if (this.currentImageIndex < this.veritapImages.length - 1) {
@@ -116,5 +138,17 @@ export class ProjectsComponent {
     } else {
       this.currentImageIndex = this.veritapImages.length - 1;
     }
+  }
+
+  openDentalClinicProject(event: Event) {
+    event.preventDefault();
+    this.isDentalClinicLoading = true;
+    document.body.style.overflow = 'hidden';
+    
+    setTimeout(() => {
+      this.isDentalClinicLoading = false;
+      document.body.style.overflow = 'auto';
+      window.open('https://dongojocruz.github.io/DCRMAS/', '_blank');
+    }, 2000);
   }
 }

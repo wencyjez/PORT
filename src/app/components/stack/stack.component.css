@@ -62,10 +62,107 @@
 }
 .interactive-pill:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
   border-color: var(--accent-color);
   background: rgba(var(--accent-color-rgb), 0.05);
 }
+
+/* ── Brand Glow Customizations ── */
+.angular-pill:hover {
+  border-color: #dd0031 !important;
+  box-shadow: 0 8px 24px rgba(221, 0, 49, 0.25) !important;
+  background: rgba(221, 0, 49, 0.04) !important;
+}
+
+.typescript-pill:hover {
+  border-color: #3178c6 !important;
+  box-shadow: 0 8px 24px rgba(49, 120, 198, 0.25) !important;
+  background: rgba(49, 120, 198, 0.04) !important;
+}
+
+.html-pill:hover {
+  border-color: #e34c26 !important;
+  box-shadow: 0 8px 24px rgba(227, 76, 38, 0.25) !important;
+  background: rgba(227, 76, 38, 0.04) !important;
+}
+
+.css-pill:hover {
+  border-color: #264de4 !important;
+  box-shadow: 0 8px 24px rgba(38, 77, 228, 0.25) !important;
+  background: rgba(38, 77, 228, 0.04) !important;
+}
+
+.javascript-pill:hover {
+  border-color: #f7df1e !important;
+  box-shadow: 0 8px 24px rgba(247, 223, 30, 0.18) !important;
+  background: rgba(247, 223, 30, 0.03) !important;
+}
+
+.java-pill:hover {
+  border-color: #f89820 !important;
+  box-shadow: 0 8px 24px rgba(248, 152, 32, 0.25) !important;
+  background: rgba(248, 152, 32, 0.04) !important;
+}
+
+.springboot-pill:hover {
+  border-color: #6db33f !important;
+  box-shadow: 0 8px 24px rgba(109, 179, 63, 0.25) !important;
+  background: rgba(109, 179, 63, 0.04) !important;
+}
+
+.php-pill:hover {
+  border-color: #777bb4 !important;
+  box-shadow: 0 8px 24px rgba(119, 123, 180, 0.25) !important;
+  background: rgba(119, 123, 180, 0.04) !important;
+}
+
+.mysql-pill:hover {
+  border-color: #00758f !important;
+  box-shadow: 0 8px 24px rgba(0, 117, 143, 0.25) !important;
+  background: rgba(0, 117, 143, 0.04) !important;
+}
+
+.firebase-pill:hover {
+  border-color: #ffca28 !important;
+  box-shadow: 0 8px 24px rgba(255, 202, 40, 0.22) !important;
+  background: rgba(255, 202, 40, 0.04) !important;
+}
+
+.android-pill:hover {
+  border-color: #3ddc84 !important;
+  box-shadow: 0 8px 24px rgba(61, 220, 132, 0.25) !important;
+  background: rgba(61, 220, 132, 0.04) !important;
+}
+
+.arduino-pill:hover {
+  border-color: #00979c !important;
+  box-shadow: 0 8px 24px rgba(0, 151, 156, 0.25) !important;
+  background: rgba(0, 151, 156, 0.04) !important;
+}
+
+.jasper-pill:hover {
+  border-color: #1a648b !important;
+  box-shadow: 0 8px 24px rgba(26, 100, 139, 0.25) !important;
+  background: rgba(26, 100, 139, 0.04) !important;
+}
+
+.github-pill:hover {
+  border-color: #f0f0f0 !important;
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.15) !important;
+  background: rgba(255, 255, 255, 0.03) !important;
+}
+
+[data-theme='dark'] .github-pill:hover {
+  border-color: #f0f0ff !important;
+  box-shadow: 0 8px 24px rgba(240, 240, 255, 0.15) !important;
+}
+
+.vscode-pill:hover {
+  border-color: #007acc !important;
+  box-shadow: 0 8px 24px rgba(0, 122, 204, 0.25) !important;
+  background: rgba(0, 122, 204, 0.04) !important;
+}
+
 
 @media (max-width: 900px) {
   .stack-grid {

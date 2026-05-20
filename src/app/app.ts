@@ -2,12 +2,13 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/header/header.component';
 import { LoadingComponent } from './shared/loading/loading.component';
+import { FooterComponent } from './shared/footer/footer.component';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, LoadingComponent, CommonModule],
+  imports: [RouterOutlet, HeaderComponent, LoadingComponent, FooterComponent, CommonModule],
   template: `
     <app-loading *ngIf="isLoading"></app-loading>
     <div class="app-container" [class.hidden]="isLoading">
@@ -24,6 +25,7 @@ import { CommonModule } from '@angular/common';
           <router-outlet></router-outlet>
         </div>
       </main>
+      <app-main-footer></app-main-footer>
     </div>
   `,
   styles: [`
