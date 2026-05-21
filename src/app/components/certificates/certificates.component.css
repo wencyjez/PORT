@@ -71,6 +71,16 @@
   height: 32px;
 }
 
+.cert-icon .tesda-logo {
+  width: 36px;
+  height: 36px;
+}
+
+.cert-icon .linkedin-logo {
+  width: 32px;
+  height: 32px;
+}
+
 [data-theme="dark"] .cert-icon .alibaba-logo {
   filter: brightness(0) invert(1);
 }
